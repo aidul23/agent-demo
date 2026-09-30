@@ -1,0 +1,128 @@
+{
+  "task": "Find how much budget per person the Atlas team has and save a short summary to atlas_summary.md.",
+  "source": "hand-crafted example; re-record live with --record",
+  "responses": [
+    {
+      "id": "msg_demo_002",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need two facts: the Atlas budget and the Atlas headcount. Budget first.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_001",
+          "name": "search_notes",
+          "input": {
+            "query": "Atlas budget"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_004",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Atlas has EUR 84,000 for 2026. The notes say budgets are per team, not per person, so I still need the team size.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_003",
+          "name": "search_notes",
+          "input": {
+            "query": "Atlas team size"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_006",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Atlas has 6 people. Budget per person is 84,000 / 6; I'll use the calculator rather than do it in my head.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_005",
+          "name": "calculator",
+          "input": {
+            "expression": "84000 / 6"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_008",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "EUR 14,000 per person. Now I'll save a short summary.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_007",
+          "name": "write_file",
+          "input": {
+            "filename": "atlas_summary.md",
+            "content": "# Atlas team: budget per person (2026)\n\n- Team budget: EUR 84,000 (budget_2026.md)\n- Team size: 6 people - 4 engineers, 1 designer, 1 PM (teams.md)\n- **Budget per person: EUR 14,000** (84,000 / 6)\n"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_009",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "text",
+          "text": "The Atlas team has **EUR 14,000 per person** for 2026 (EUR 84,000 budget ÷ 6 people). I saved a short summary to `output/atlas_summary.md`."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    }
+  ]
+}

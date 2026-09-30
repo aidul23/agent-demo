@@ -1,0 +1,6 @@
+{
+  "CUS-0000": {"customer_id": "CUS-0000", "plan": "Free", "seats": 1, "renewal_date": null, "status": "active"},
+  "CUS-0042": {"customer_id": "CUS-0042", "name": "Maria Lindqvist", "plan": "Business Pro", "seats": 25, "renewal_date": "2026-10-31", "status": "active"},
+  "CUS-0117": {"customer_id": "CUS-0117", "name": "Mario Lindgren", "plan": "Starter", "seats": 3, "renewal_date": "2027-02-14", "status": "active"},
+  "CUS-0230": {"customer_id": "CUS-0230", "name": "Jonas Berg", "plan": "Enterprise", "seats": 140, "renewal_date": "2027-06-01", "status": "active"}
+}

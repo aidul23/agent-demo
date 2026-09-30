@@ -1,0 +1,5 @@
+.venv/
+.env
+__pycache__/
+demo1_tools/output/
+demo2_failures/output/

@@ -1,0 +1,100 @@
+{
+  "task": "Marketing wants to announce the Project Orion launch date in tomorrow's newsletter. What date should they announce?",
+  "source": "hand-crafted example; re-record live with --record",
+  "responses": [
+    {
+      "id": "msg_demo_086",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me check what the shared memory says about Orion.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_085",
+          "name": "read_memory",
+          "input": {}
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_088",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Memory says the launch is 2026-10-15, but that entry came from planner-bot's auto-summary of the kickoff slides, recorded on 2026-05-12. It's old and second-hand, and this date is going into a public newsletter, so I'll verify it against the project notes.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_087",
+          "name": "search_notes",
+          "input": {
+            "query": "Orion launch date"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_090",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Conflict! The 2026-09-22 PM sync moved the launch to 2026-11-03 after the security review, and Priya confirmed it in writing on 2026-09-23. That's newer and comes from the PM, so it wins. I'll correct the memory so other agents don't repeat the mistake.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_089",
+          "name": "write_memory",
+          "input": {
+            "fact": "Project Orion launch date: 2026-11-03 (moved from 2026-10-15 after the security review).",
+            "source": "orion_status.md: PM sync 2026-09-22, confirmed by Priya Shah 2026-09-23"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_091",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "text",
+          "text": "Marketing should announce **3 November 2026**.\n\n⚠️ **Conflict found:** our shared memory said 15 October, but that entry was an auto-summary of the May kickoff slides. The 22 September PM sync moved the launch to 3 November after the security review, and Priya Shah confirmed it in writing on 23 September. I've added the corrected date to memory."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    }
+  ]
+}

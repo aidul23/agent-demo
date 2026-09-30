@@ -1,0 +1,2 @@
+- Pick a note-taking app for the team wiki
+- Renew the office Wi-Fi contract

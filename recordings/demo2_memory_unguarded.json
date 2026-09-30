@@ -1,0 +1,47 @@
+{
+  "task": "Marketing wants to announce the Project Orion launch date in tomorrow's newsletter. What date should they announce?",
+  "source": "hand-crafted example; re-record live with --record",
+  "responses": [
+    {
+      "id": "msg_demo_083",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Memory first, as instructed: it's faster and already verified.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_082",
+          "name": "read_memory",
+          "input": {}
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_084",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "text",
+          "text": "Marketing should announce **15 October 2026**. That's the Project Orion launch date in our team memory."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    }
+  ]
+}

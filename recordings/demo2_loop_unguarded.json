@@ -1,0 +1,266 @@
+{
+  "task": "Get the Q3 sales report and tell me the total revenue.",
+  "source": "hand-crafted example; re-record live with --record",
+  "responses": [
+    {
+      "id": "msg_demo_034",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I'll fetch the Q3 sales report from the reporting service.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_033",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_036",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "503 Service busy: that's a temporary error. My instructions say to retry.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_035",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_038",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Still busy. It's a transient error, so I'll try again.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_037",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_040",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Another 503. The service usually recovers after a few attempts. Retrying.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_039",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_042",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The team is counting on these numbers. Trying once more.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_041",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_044",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Service still busy. Maybe it's under heavy load right now; retrying.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_043",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_046",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Retrying the Q3 sales report again.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_045",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_048",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "It keeps saying 'try again in a moment'. I'll try again.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_047",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_050",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Still failing. One more attempt.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_049",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "msg_demo_052",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-opus-5-5",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Retrying fetch_report for Q3 sales.",
+          "signature": ""
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_demo_051",
+          "name": "fetch_report",
+          "input": {
+            "report_name": "Q3 sales"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    }
+  ]
+}
